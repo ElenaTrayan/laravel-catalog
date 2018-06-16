@@ -324,6 +324,7 @@ class PagesController extends Controller
 //                }
 //            ])
             ->get();
+
 //        dd($deliveries);
         $result = [
             'resultHtml' => (string) view('partials._selectDelivery', compact('deliveries'))->render()
