@@ -1,0 +1,3258 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+
+
+
+  .persent-size
+    width: calc((100% - 30px - 2px) / 3)
+    &:nth-child(2n)
+      margin: 0 15px 15px 0
+    &:nth-child(3n)
+      margin: 0 0 15px 0
+
+  .popup-basket.active
+    max-width: 500px
+    top: 0px
+    left: auto
+    right: 0px
+    border-left: 1px solid #2b2b2b
+    height: auto
+    .title
+      padding: 1.55rem 15px
+    .popup-basket-body
+      padding: 1.5rem 5vw 0
+      .item
+        position: relative
+        .icon-close
+          position: absolute
+          right: 0
+          margin: 0
+        .item-info
+          display: flex
+          align-items: stretch
+          img
+            width: 120px
+            height: 120px
+            margin: 0 15px 0 0
+          .info
+            justify-content: space-between
+            .product-name
+              font-size: 1.5rem
+              text-align: left
+              width: 90%
+            .price-quantity-block
+              display: flex
+              justify-content: space-between
+              align-items: center
+              .price-block
+                display: flex
+                flex-flow: column nowrap
+                margin-bottom: 0px
+                .price
+                  font-size: 1.5rem
+              .quantity
+                .less,
+                .more
+                  width: 34px
+                .less,
+                .more,
+                input
+                  height: 34px
+                input
+                  width: 75px
+                  font-size: 1.5rem
+        .total
+          text-align: right
+          margin-bottom: 1.5rem
+          font-size: 1.6rem
+    //.popup-basket-footer
+    //  .total-result
+    //    padding: 0px 5vw 15px
+
+  //.mobile-popup-basket.active
+  //    .popup-basket-body
+  //        .item
+  //            .item-info
+  //                .info
+  //                    //width: 70%
+  //                    display: flex
+  //                    flex-flow: column
+  //                    //justify-content: space-between
+  //                    //width: 48%
+  //                    width: calc(100% - 155px)
+  //                    .product-name
+  //                        margin-bottom: 1rem
+  //                        text-align: left
+  //                        font-size: 1.5rem
+  //                        padding-right: 30px
+  //                    .trademark
+  //                        text-align: left
+  //                        margin-bottom: 1rem
+  //                        //height: 0
+  //                        //opacity: 0
+  //                        //margin: 0
+  //                    .price-quantity-block
+  //                        display: flex
+  //                        flex-flow: row wrap
+  //                        align-items: center
+  //                        justify-content: flex-start
+  //                        .price-block
+  //                            text-align: left
+  //                            margin: 0 15px 0 0
+  //                            display: flex
+  //                            flex-flow: column
+  //                            align-items: flex-start
+  //                            justify-content: center
+  //                            //flex-grow: 1
+  //                            .price
+  //                                font-size: 1.4rem
+  //                        .quantity
+  //                            justify-content: flex-end
+  //                            //flex-grow: 1
+  //                            .less,
+  //                            .more
+  //                                font-size: 1.8rem
+  //                                width: 34px
+  //                            .less,
+  //                            .more,
+  //                            input
+  //                                height: 34px
+  //                            input
+  //                                width: 90px
+  //                                font-size: 1.4rem
+  //    .total-result
+  //        padding: 1.5rem 15px
+  //    .btn-actions
+  //        .btn.btn-edit-basket,
+  //        .btn.btn-make-order
+  //            padding: 1.5rem 15px
+
+  .tabs.action-new>label
+    padding: 15px
+    width: calc((100% - 8.8px)/3)
+  .tabs.action-new>label:last-of-type
+    padding: 2.1333rem
+  .tabs.action-new > label::before
+    font-size: 2rem
+    line-height: 1.3rem
+
+  .action-new
+    margin-bottom: 3rem
+
+  .main
+    .delivery-tabs
+      > label
+        width: calc((100% - 8.8px)/3)
+
+  .main
+    #products-catalog
+      flex-flow: row wrap
+      justify-content: space-between
+      .item
+        width: calc((100% - 30px) / 2)
+        //padding: 15px
+        h3
+          height: 60px
+          overflow: hidden
+        .info-block
+          .available
+            width: 0px
+            height: 0px
+            top: 0px
+            right: 0px
+            font-size: 0px
+            &:before
+              content: ''
+              display: block
+              right: 0
+    .catalog-block
+      .filters-block
+        .btn-filters-block
+          justify-content: flex-start
+          .btn-filters
+            padding: 1.2rem 5rem 1.2rem 0
+            width: auto
+            &:first-child
+              margin-right: 3rem
+              &:after
+                left: 12rem
+        .block-filter-price
+          .filter-price-body
+            justify-content: flex-start
+            input
+              width: 20%
+              margin: 0 1.5rem 0 0
+              &:last-child
+                margin: 0 0 0 1.5rem
+  .main
+    .product-info
+      .properties
+        table
+          td
+            padding: 10px
+          .first-col
+            width: 35%
+            text-align: left
+
+  .related-products
+    .slick-slide
+      margin: 0 15px
+    .slick-list
+      margin: 0 0 4rem
+    .slick-slider
+      .item
+        .item-img
+          width: 100%
+        h3
+          font-size: 1.5rem
+          height: 60px
+          overflow: hidden
+
+  .slick-carousel
+    .slick-slide
+      .item
+        .item-body
+          h3
+            height: 60px
+            overflow: hidden
+
+  .main
+    .trademark-page
+      display: block
+      img
+        margin: 0 20px 20px 0
+        width: 35%
+        float: left
+
+  .main
+    .page-product
+      .left-block
+        margin: 0 0 3rem
+      .right-block
+        .buy
+          width: 50%
+        .info
+          .available-info
+            margin: 3rem 0 1rem
+            .status
+              top: 0
+        .add-btn
+          text-align: left
+
+  .main
+    .panel-body
+      .form-horizontal
+        width: 70%
+
+  .basket-page
+    .basket-item
+      padding: 15px 0 18px
+      .icon-close
+        font-size: 2.5rem
+        padding: 5px 15px
+      .basket-img
+        width: 250px
+        margin: 0 auto 15px
+      .information
+        padding-bottom: 1.5rem
+      .price-quantity-block
+        flex-flow: row nowrap
+        justify-content: center
+        align-items: center
+      .td2,
+      .quantity
+        padding-bottom: 0
+        margin-right: 1.5rem
+      .quantity
+        input
+          width: 70px
+
+  /* ------------ ФУТЕР -------------- */
+  .footer
+    .subscription-bg
+      .subscription
+        width: 80%
+        margin: 0 auto
+        padding: 4rem 2rem
+    .footer-bg
+      .footer-main
+        .contacts-info
+          .social-icons
+            justify-content: flex-start
+            li
+              margin-right: 6rem
+
+
+/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+
+  .persent-size
+    width: calc((100% - 60px - 2px) / 5)
+    &:nth-child(2n)
+      margin: 0 15px 15px 0
+    &:nth-child(3n)
+      margin: 0 15px 15px 0
+    &:nth-child(5n)
+      margin: 0 0 15px 0
+
+  .header
+    .menu-mobile
+      display: flex
+      justify-content: space-between
+      padding: 0.7rem 5vw
+      height: 6rem
+      .left-icon-menu, .icon-menu
+        display: flex
+        align-items: center
+      a
+        color: #fff
+      i
+        font-size: 2rem
+      .logo
+        width: 20%
+      .icon-menu
+        li
+          i
+            margin-right: 1.5rem
+        li:last-of-type i
+          margin-right: 0
+
+  //.popup-basket
+  .popup-basket.active
+    .popup-basket-body
+      padding: 1.5rem 1.5rem 0
+    .popup-basket-footer
+      .total-result
+        padding: 1.5rem 1.5rem
+    .btn-actions
+      .btn.btn-edit-basket,
+      .btn.btn-make-order
+        padding: 1.5rem 1.5rem
+
+  //.mobile-popup-basket.active
+  //    width: 600px
+  //    height: 100vh
+  //    //padding: 0 15px
+  //    padding: 0
+  //    top: 0
+  //    right: 0
+  //    left: auto
+  //    display: flex
+  //    flex-flow: column
+  //    justify-content: space-between
+  //    .title
+  //        //margin: 0 -15px 1.5rem
+  //        margin: 0
+  //        padding: 1.5rem 15px
+  //    .popup-basket-body
+  //        padding: 1.5rem 15px
+  //        overflow: auto
+  //        .item
+  //            .icon-close
+  //                position: absolute
+  //                right: 0px
+  //                top: 0px
+  //            .item-info
+  //                display: flex
+  //                align-items: flex-start
+  //                //align-items: stretch
+  //                img
+  //                    width: 130px
+  //                    height: 130px
+  //                    margin-right: 15px
+  //                .info
+  //                    //width: 70%
+  //                    display: flex
+  //                    flex-flow: column
+  //                    justify-content: space-between
+  //                    width: calc(100% - 145px)
+  //                    //width: 65%
+  //                    .product-name
+  //                        margin-bottom: .5rem
+  //                        text-align: left
+  //                        font-size: 1.5rem
+  //                        padding-right: 30px
+  //                        //width: calc(100% - 175px)
+  //                        //margin-right: 30px
+  //                    .trademark
+  //                        //text-align: left
+  //                        height: auto
+  //                        opacity: 1
+  //                        margin-bottom: 0.5rem
+  //                        font-size: 1.3rem
+  //                        text-align: left
+  //                        padding-right: 30px
+  //                    .price-quantity-block
+  //                        display: flex
+  //                        flex-flow: row nowrap
+  //                        align-items: center
+  //                        justify-content: space-between
+  //                        //justify-content: space-between
+  //                        .price-block
+  //                            text-align: left
+  //                            margin: 0 15px 0 0
+  //                            display: flex
+  //                            flex-flow: column nowrap
+  //                            align-items: center
+  //                            .price
+  //                                font-size: 1.5rem
+  //                        .quantity
+  //                            //flex-basis: 50%
+  //                            justify-content: flex-end
+  //                            input
+  //                                font-size: 1.5rem
+  //                            .less,
+  //                            .more
+  //                                font-size: 2rem
+  //                                width: 40px
+  //                            .less,
+  //                            .more,
+  //                            input
+  //                                border-radius: 4px
+  //                                height: 40px
+  //                                -webkit-border-radius: 4px
+  //                            input
+  //                                width: 100px
+  //            .item-total
+  //                text-align: right
+  //    .total-result
+  //        margin: 0
+  //        padding: 1.5rem 15px
+  //    .btn-actions
+  //        margin: 0
+  //        padding: 0
+  //        .btn.btn-edit-basket,
+  //        .btn.btn-make-order
+  //            padding: 1.5rem 15px
+
+  .main
+    #products-catalog
+      margin-right: -15px
+      justify-content: flex-start
+      .item
+        //width: calc((100% - 45px) / 3) margin-right: 15px margin-bottom: 15px
+        width: calc((100% - 90px) / 3)
+        margin-right: 30px
+        margin-bottom: 30px
+      .quantity
+        input
+          width: 9rem
+      .add-btn
+        .buy
+          width: auto
+          padding: 0 1.2rem
+
+
+  .main
+    .products-catalog-head
+      //margin-bottom: 1.5rem
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .title
+        h2
+          //margin: 3rem 0 3rem
+          color: #2B2B2B
+          font-size: 1.8rem
+        span
+          font-size: 1.5rem
+      .products-catalog-sort
+        display: block
+        p
+          font-size: 1.5rem
+          color: #2B2B2B
+
+  .main
+    .catalog-block
+      .filters-block
+        .block-filter-price
+          .filter-price-body
+            input
+              width: 15%
+        .filter-category-footer
+          .apply
+            width: 50%
+
+  .product-slider
+    width: 90%
+    margin: 0 auto 30px
+    .slick-next
+      right: -30px
+    .slick-prev
+      left: -30px
+    .slick-dots
+      bottom: -40px
+
+  .related-products
+    margin: 0 auto
+    .title
+      margin: 0 0 4rem
+    .slick-list
+      margin: 0 auto 4rem
+      width: 94%
+    .slick-slider
+      .item
+        .item-body
+          h3
+            font-size: 1.5rem
+
+  .action-new.tabs
+    >label
+      font-size: 1.6rem
+      width: calc(33% - 2px)
+      text-transform: uppercase
+      padding: 12px
+    >label:before
+      font-size: 0
+    >label:first-of-type
+      margin-left: 3px
+    >label:last-of-type
+      padding: 12px
+      font-size: 1.6rem
+
+  .action-new
+    margin-bottom: 4rem
+
+  .main
+    .payment-tabs
+      min-height: 450px
+    .delivery-tabs
+      min-height: 700px
+  .main
+    .delivery-tabs,
+    .payment-tabs
+      text-align: left
+      > input:checked + label
+        position: relative
+      > input:checked + label:before
+        display: block
+        content: ''
+        width: 15px
+        height: 15px
+        background: #009933
+        position: absolute
+        right: -7.5px
+        top: calc(50% - 7.5px)
+        -moz-transform: rotate(45deg) /* Для Firefox */
+        -ms-transform: rotate(45deg) /* Для IE */
+        -webkit-transform: rotate(45deg) /* Для Safari, Chrome, iOS */
+        -o-transform: rotate(45deg) /* Для Opera */
+        transform: rotate(45deg)
+      > label
+        display: block
+        width: 25%
+        margin: 0
+        background: #EDEDED
+        border-radius: 0
+        padding: 15px
+        border-bottom: 1px solid #e3e3e3
+      > label:last-of-type
+        padding: 15px
+        border-bottom: none
+      > label:hover
+        color: #575757
+        background: #f0f0f0
+      section
+        position: absolute
+        top: 0
+        left: calc(25% + 15px)
+        width: auto
+        padding: 0 0 0 15px
+
+  .slick-carousel
+    margin: 0 auto
+    .slick-slide
+      padding: 15px 15px 5px
+      margin: 5px 7.5px
+      &:hover a
+        text-decoration: none
+      .item
+        .item-body
+          h3
+            height: 80px
+            overflow: hidden
+        .add-btn
+          .buy
+            i
+              margin-right: 0
+    .slick-list
+      width: 94%
+      margin: 0 auto
+    //margin: 0 -7.5px
+
+  .slick-prev,
+  .slick-next
+    right: 0
+    width: 27px
+  .slick-prev:hover:before,
+  .slick-prev:focus:before,
+  .slick-next:hover:before,
+  .slick-next:focus:before
+    color: #F5721D
+  .slick-prev:after,
+  .slick-next:after
+    display: none
+  .slick-prev:before,
+  .slick-next:before
+    color: #FF812F
+  .slick-prev:before
+    left: 0
+  [dir='rtl'] .slick-prev:before
+    left: 0
+  .slick-next:before
+    right: 0
+  [dir='rtl'] .slick-next:before
+    right: 0
+  .slick-prev
+    left: 0
+  [dir='rtl'] .slick-prev
+    right: 0
+    left: auto
+  .slick-next
+    right: 0
+  [dir='rtl'] .slick-next
+    right: auto
+    left: 0
+
+  .action-new section
+    margin: 0
+
+  #promo-section
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    align-content: flex-start
+    margin: 3rem 0 4rem
+    .main-slider
+      margin: 0
+      width: 100%
+      //width: calc(80% - 15px)
+    .promo-block
+      display: none
+      //width: calc(20% - 15px)
+      //display: block
+      img
+        height: 100%
+
+  .advertise-area
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    margin-bottom: 4rem
+    a
+      width: calc((100% - 30px) / 3)
+
+  .progress-steps
+    margin-bottom: 5rem
+    .steps
+      display: flex
+      //flex-flow: row nowrap
+      flex-flow: row wrap
+      //justify-content: space-between
+      justify-content: center
+      .item
+        position: relative
+        padding: 75px 30px 40px
+        text-align: center
+        margin-bottom: 0
+        //width: calc((100% - 120px) / 5)
+        width: calc(100% / 3)
+        //margin-left: 2rem
+        &:nth-child(3):after
+          display: none
+        &:after
+          content: '\f054'
+          //right: -26px
+          top: calc(50% - 18px)
+          //top: calc(100% - 2px)
+          left: 100%
+
+  .news-block
+    .items
+      flex-flow: row wrap
+      justify-content: space-between
+      .item
+        width: calc((100% - 30px) / 2)
+
+  .product-info
+    .properties
+      label
+        font-size: 1.5rem
+        font-family: "roboto", sans-serif
+        font-weight: 500
+        text-transform: uppercase
+        padding: 2rem 1.6333rem 1.6333rem
+      label:before
+        display: none
+
+  .trademarks-slider
+    //.slick-slider
+    //  margin: 0 -5vw
+    //.slick-slide
+    //  &:hover
+    //    background: #fff
+    //    border: 2px solid #FF812F
+    //  &:hover a
+    //    text-decoration: none
+    .slick-list
+      margin: 0 auto
+      width: 80vw
+    .slick-prev
+      left: 5vw
+    [dir='rtl'] .slick-prev
+      right: 5vw
+      left: auto
+    .slick-next
+      right: 5vw
+    [dir='rtl'] .slick-next
+      right: auto
+      left: 5vw
+
+  .main
+    .trademark-page
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: flex-start
+      margin-bottom: 5rem
+      img
+        margin: 0
+        width: 200px
+        //width: calc(30% - 15px)
+      .content
+        width: calc(100% - 200px - 40px)
+
+  .main
+    .page-product
+      .right-block
+        .info
+          .available-info
+            margin: 3rem 0 1rem
+            .status
+              top: 0
+        .buy
+          width: 50%
+        .add-btn
+          text-align: left
+      .left-block
+        .product-slider
+          width: calc(100% - 120px)
+          margin: 0 auto 5rem
+          .slick-next
+            right: -60px
+          .slick-prev
+            left: -60px
+          .slick-prev::before,
+          .slick-next::before
+            font-size: 6rem
+
+  .main
+    .panel-body
+      .form-horizontal
+        width: 50%
+
+  .basket-page
+    .basket-item
+      flex-flow: row nowrap
+      justify-content: space-between
+      position: relative
+      .basket-title-desc
+        flex-flow: row nowrap
+        width: 70%
+        align-items: flex-start
+      .icon-close
+        font-size: 2.2rem
+        width: 35px
+        top: 8px
+        left: -8px
+        height: 35px
+        padding: 0
+        display: flex
+        align-items: center
+        justify-content: center
+      .basket-img
+        width: 100px
+        height: 100px
+        margin: 0 15px 0 35px
+        img
+          width: auto
+          height: auto
+          overflow: hidden
+      .information
+        margin: 0 15px 0 0
+        width: calc(100% - 150px)
+      .price-quantity-block
+        flex-flow: column
+        justify-content: flex-start
+        width: 30%
+      .td2,
+      .quantity
+        margin: 0 0 1rem
+      .quantity
+        input
+          width: 70px
+  .basket-total-result
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .clear-cart
+      display: block
+      color: #ddd
+      &:hover
+        color: #2b2b2b
+  .basket-checkout
+    .checkout
+      display: inline-block
+
+
+  /* ------------ ФУТЕР -------------- */
+  .footer
+    .subscription-bg
+      form
+        width: 60%
+    .footer-bg
+      .footer-main
+        flex-flow: row wrap
+        justify-content: center
+        section
+          width: 40%
+        .contacts-info
+          .social-icons
+            justify-content: space-between
+            li
+              margin-right: 0
+  //        top: calc(50% + 0px);
+  //left: calc(100% + 5px);
+
+/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+
+  //.main
+  //  .trademark-page
+  //    .content
+  //      width: calc(100% - 200px - 40px)
+
+  .main
+    .catalog-block
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      margin: 4rem 0
+      .filters-block
+        width: calc(20% - 15px)
+        .btn-filters-block
+          display: none
+        form
+          display: block
+        .block-filter-category,
+        .block-filter-brand,
+        .block-filter-price
+          margin-top: 15px
+        .title
+          margin-right: 2rem
+          font-weight: 600
+          color: #2B2B2B
+          font-size: 1.5rem
+        //.filter-category-body
+        //  //overflow: auto
+        //  //height: 150px
+        //  padding: 12px 0 15px
+        //  input
+        //    margin-right: .8rem
+        //    &:hover
+        //      cursor: pointer
+        //  label
+        //    font-size: 1.4rem
+        .filter-category-footer
+          padding: 0 0 15px
+          .apply
+            width: 100%
+          //.apply
+          //  color: #fff
+          //  text-transform: none
+          //  font-weight: 600
+          //  font-size: 1.4rem
+          //  //background: #FF5722
+          //  background: #FF812F
+          //  border: none
+          //  box-shadow: none
+          //  padding: 1rem
+          //  display: block
+        .block-filter-price
+          .filter-price-body
+            display: flex
+            justify-content: space-between
+            padding: 20px 0 20px
+            input
+              width: calc(50% - 15px)
+              padding: 7px 10px
+              border: 2px rgba(0, 0, 0, 0.3) solid
+              border-radius: 3px
+              &:focus
+                border: 2px #2DC8B8 solid
+            span
+              line-height: 39px
+          //margin-top: 20px
+        //.group
+        //  margin-bottom: 35px
+        //  label
+        //    font-size: 15px
+        //  input
+        //    font-size: 15px
+        //    width: 100%
+        //  .bar
+        //    width: 100%
+      #products-catalog
+        width: calc(80% - 15px)
+
+
+
+  .persent-size
+    width: calc((100% - 75px - 2px) / 6)
+    &:nth-child(2n)
+      margin: 0 15px 15px 0
+    &:nth-child(3n)
+      margin: 0 15px 15px 0
+    &:nth-child(5n)
+      margin: 0 15px 15px 0
+    &:nth-child(6n)
+      margin: 0 0 15px 0
+
+  .grid
+    margin: 5rem 0 5rem
+
+  #promo-section
+    .main-slider
+      width: calc(80% - 15px)
+    .promo-block
+      width: calc(20% - 15px)
+      display: block
+
+  .main
+    .action-new.tabs
+      >label
+        width: calc(25% - 2px)
+        font-size: 1.5rem
+      >label:before
+        //font-size: 22px
+        //line-height: 1.3rem
+        font-size: 0px
+      >label:last-of-type
+        padding: 12px
+      >label:first-of-type
+        margin-left: calc((25% - 6px)/2)
+
+    #products-catalog
+      .item
+        width: calc((100% - 90px) / 3)
+      .pagination
+        margin-bottom: 0
+        li
+          margin-bottom: 0
+
+  .main
+    .page-product
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      margin-top: 4rem
+      .left-block,
+      .right-block
+        width: calc((100% - 30px) / 2)
+      .left-block
+        margin: 0
+        .product-slider
+          width: calc(100% - 60px)
+          margin: 0 auto 5rem
+          .slick-next
+            right: -30px
+          .slick-prev
+            left: -30px
+          .slick-prev::before,
+          .slick-next::before
+            font-size: 38px
+      .right-block
+        h2
+          font-size: 2rem
+        .description
+          font-size: 1.4rem
+        .info
+          .available-info
+            margin: 3rem 0 2rem
+            span
+              font-size: 1.4rem
+              color: #787878
+              font-family: "opensans-example", sans-serif
+            .status
+              right: 0
+              span
+                font-size: 1.4rem
+                color: #fff
+            .available
+              font-size: 1.4rem
+              color: #37A247
+              font-family: "opensans-example", sans-serif
+              position: relative
+              margin-left: 35px
+              &:before
+                content: ''
+                display: block
+                width: 14px
+                height: 14px
+                background: #37A247
+                border-radius: 50%
+                position: absolute
+                top: 3px
+                left: -22px
+        .other-info
+          display: flex
+          padding-bottom: 15px
+          border-bottom: 1px solid #EDEDED
+          margin-bottom: 15px
+          flex-flow: row nowrap
+          .product-code
+            margin: 0 4rem .5rem 0
+          p
+            font-size: 1.4rem
+            color: #787878
+            span
+              color: #575757
+              margin-left: 15px
+        table
+          margin-bottom: 10px
+          tr
+            border-bottom: 10px solid #fff
+          .tr-quantity
+            border-bottom: 15px solid #fff
+          .first-col
+            width: 5rem
+            font-size: 1.4rem
+            color: #787878
+            padding-right: 4rem
+            //padding-bottom: 1rem
+            vertical-align: middle
+          .price-old
+            color: #9D9D9D
+            font-size: 1.6rem
+          .price-new
+            color: #ED4242
+            font-size: 2rem
+          .total
+            font-weight: 600
+            font-size: 2.2rem
+            color: #2A2A2A
+        .buy
+          font-size: 1.8rem
+          height: 44px
+          line-height: 44px
+          padding: 0px 40px
+          display: inline-block
+          width: auto
+          margin-bottom: 15px
+          i
+            margin-right: 8px
+        .quantity
+          .less,
+          .more,
+          input
+            height: 44px
+            line-height: 44px
+          .less,
+          .more
+            width: 44px
+        .add-btn
+          margin-bottom: 15px
+          padding-bottom: 15px
+          //border-bottom: 1px solid #EDEDED
+          .compare
+            margin-right: 2rem
+          span
+            i
+              margin-right: 6px
+            &:hover
+              color: #FF812F
+              cursor: pointer
+              i
+                color: #FF812F
+    .product-info
+      justify-content: space-between
+      flex-flow: row nowrap
+      .left-block
+        //width: calc(100% - 30px - 317.5px)
+        width: calc(100% - 50px - 300px)
+      .right-block
+        //width: 317.5px
+        width: 300px
+        //margin-top: 64px
+      .properties
+        margin-bottom: 3.5rem
+      .delivery-payment
+        margin-bottom: 0
+        //h3
+          //color: red
+      .tabs>label
+        padding: 20px 0px 15px
+
+  .main-slider
+    .slick-prev,
+    .slick-next
+      z-index: 3
+      font-size: 0
+      line-height: 0
+      position: absolute
+      //top: 50%
+      display: block
+      //width: 38px
+      height: 32px
+      //width: auto
+      padding: 0
+      -webkit-transform: translate(0, -50%)
+      -ms-transform: translate(0, -50%)
+      transform: translate(0, -50%)
+      cursor: pointer
+      color: transparent
+      border: none
+      outline: none
+      width: 32px
+      background: #869791
+      opacity: .5
+      border-radius: 50%
+      &:before
+        opacity: .5
+        color: #d5d5d5
+        font-size: 1.5rem
+        line-height: 2.2
+        transition: all .6s ease-in-out
+        top: 0px
+    .slick-prev
+      &:before
+        left: 9px
+    .slick-next
+      &:before
+        right: 9px
+    .slick-prev
+      left: 15px
+    [dir='rtl'] .slick-prev
+      right: 15px
+      left: auto
+    .slick-next
+      right: 15px
+    [dir='rtl'] .slick-next
+      right: auto
+      left: 15px
+    .slick-prev.slick-disabled:before,
+    .slick-next.slick-disabled:before
+      opacity: .5
+    .slick-prev:before
+      content: '\f053'
+      margin-right: 2px
+    [dir='rtl'] .slick-prev:before
+      content: '\f053'
+      margin-right: 2px
+    .slick-next:before
+      content: '\f054'
+      margin-left: 2px
+    //content: '\f105'
+    [dir='rtl'] .slick-next:before
+      content: '\f054'
+      margin-left: 2px
+
+  .advertise-area
+    a
+      width: calc((100% - 60px) / 3)
+
+  .progress-steps
+    margin-bottom: 5rem
+    .steps
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      .item
+        padding: 75px 15px 0
+        width: calc((100% - 120px) / 5)
+        &:nth-child(3):after
+          display: block
+        &:after
+          right: -26px
+          top: calc(50% - 15px)
+
+  .main
+    .payment-tabs
+      min-height: 330px
+
+  .slick-carousel
+    .slick-list
+      width: 98%
+
+  .trademarks-slider
+    margin-bottom: 5rem
+    .slick-slide
+      margin: 0 5px
+    .slick-list
+      width: 86vw
+    .slick-prev
+      left: 4vw
+    [dir='rtl'] .slick-prev
+      right: 4vw
+      left: auto
+    .slick-next
+      right: 4vw
+    [dir='rtl'] .slick-next
+      right: auto
+      left: 4vw
+
+  .main
+    .panel-body
+      .form-horizontal
+        width: 40%
+
+  .basket-page
+    .item-title
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 15px
+      border-top: 1px solid #EDEDED
+      border-left: 1px solid #EDEDED
+      border-right: 1px solid #EDEDED
+      .td1
+        width: 55%
+        text-align: center
+      .td2
+        width: 10%
+        text-align: center
+      .td3
+        width: 20%
+        text-align: center
+      .td4
+        width: 10%
+        text-align: center
+    .basket-item
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border-top: 1px solid #EDEDED
+      border-left: 1px solid #EDEDED
+      border-right: 1px solid #EDEDED
+      padding: 15px
+      &:last-child
+        border-bottom: 1px solid #EDEDED
+      .basket-title-desc
+        width: calc(55% - 15px)
+      .icon-close
+        align-self: flex-start
+        cursor: pointer
+        left: 0px
+        top: 0px
+      .basket-img
+        width: 100px
+        height: 100px
+        margin: 0 15px 0 22px
+        border: none
+        img
+          width: 100px
+          height: 100px
+      .information
+        align-items: flex-start
+        .title
+          display: block
+          font-size: 1.4rem
+          text-align: left
+      .quantity
+        input
+          width: 70px
+      .price-quantity-block
+        flex-flow: row nowrap
+        justify-content: space-between
+        width: calc(45% - 15px)
+        .td2
+          width: 24%
+          justify-content: center
+          margin: 0
+        .td4
+          width: 26%
+          justify-content: center
+        .quantity
+          width: 50%
+          margin: 0
+        .basket-total
+          display: flex
+          flex-flow: row nowrap
+          align-items: center
+
+
+
+
+  .basket-table
+    display: table
+    width: 100%
+    //border: 1px solid #EDEDED
+    border-top: 1px solid #EDEDED
+    border-left: 1px solid #EDEDED
+    border-right: 1px solid #EDEDED
+    border-collapse: collapse
+    margin-bottom: 1rem
+    background: #fff
+    th
+      font-size: 1.6rem
+      font-weight: 600
+      padding: 15px
+    tr
+      border-top: 1px solid #EDEDED
+      //border: 1px solid #EDEDED
+      &:hover
+        background: #f9f9f9
+      &:first-child,
+      &:last-child
+        &:hover
+          background: #fff
+    td
+      padding: 15px
+    //border: 1px solid #EDEDED /*потом убрать*/
+    th,
+    td
+      vertical-align: middle
+    tr
+      td
+        &:last-child
+          vertical-align: top
+    label
+      position: relative
+      &:hover
+        cursor: pointer
+    .basket-img
+      width: 100px
+      height: 100px
+    //border: 1px solid #EDEDED
+    .info-block
+      width: 45%
+      padding-left: 0
+      a
+        font-size: 1.4rem
+        color: #2b2b2b
+        font-family: $default-font
+        cursor: pointer
+        display: block
+      span
+        font-size: 1.2rem
+        font-family: $default-font
+        padding-right: 15px
+    .quantity
+      input
+        width: 60px
+        &:focus
+          border: 1px solid #ff812f
+    .basket-img-line
+      width: 120px
+    .basket-price-line
+      color: #ED4242
+      font-weight: 600
+      padding: 0 0 0 15px
+      font-size: 1.5rem
+      span
+        font-size: 1.3rem
+    //font-weight: normal
+    .basket-quantity-line
+      width: 160px
+    .basket-total-line
+      padding: 0 0 0 15px
+      .total
+        font-weight: 600
+        font-size: 1.6rem
+      span
+        font-size: 1.3rem
+    .icon-close
+      cursor: pointer
+      font-size: 1.8rem
+    .basket-total-result
+      .clear
+        font-size: 1.5rem
+        cursor: pointer
+      .basket-clear-line
+        border-left: 1px solid #fff
+      .basket-total-result-line
+        border-right: 1px solid #fff
+        padding: 15px 0
+        p
+          text-align: right
+          font-size: 1.6rem
+          .amount
+            font-size: 2rem
+            font-weight: 600
+            margin-left: 1rem
+          span
+            font-size: 1.5rem
+            margin-left: .6rem
+  .basket-checkout
+    text-align: right
+    margin-bottom: 5rem
+    .checkout
+      background: #FF8E44
+      padding: 1rem 2rem
+      text-align: center
+      border-radius: 2px
+      font-weight: 600
+      text-transform: uppercase
+      color: #fff
+
+  /* ------------ ФУТЕР -------------- */
+  .footer
+    .subscription-bg
+      form
+        width: 50%
+    .footer-bg
+      .footer-main
+        flex-flow: row nowrap
+        justify-content: space-between
+        padding: 3rem 5vw
+        section
+          width: auto
+
+//        top: calc(50% + 0px);
+//left: calc(100% + 5px);
+
+/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+
+  .header
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%
+    position: relative
+    width: 100%
+    height: auto
+
+  .persent-size
+    width: calc((100% - 105px - 2px) / 8)
+    &:nth-child(2n)
+      margin: 0 15px 15px 0
+    &:nth-child(3n)
+      margin: 0 15px 15px 0
+    &:nth-child(5n)
+      margin: 0 15px 15px 0
+    &:nth-child(6n)
+      margin: 0 15px 15px 0
+    &:nth-child(8n)
+      margin: 0 0 15px 0
+
+  .header .menu-mobile
+    left: -9999px
+    position: absolute
+
+  .container
+    //width: 1170px
+    width: 90vw
+    margin: 0 auto
+    padding: 0
+
+  .header-top
+    display: flex
+    justify-content: space-between
+    //height: 7rem
+    height: 5rem
+    align-items: center
+    border-bottom: 1px solid #E4E4E4
+    font-size: 1.4rem
+    a
+      color: #191921
+    ul
+      display: flex
+      justify-content: space-between
+      li
+        padding-right: 3rem
+        .active
+          color: #000
+          font-weight: 600
+    .language
+      a
+        &:hover,
+        &:active
+          color: #FF812F
+    .language > a.active
+      font-weight: 600
+
+  .header-bottom
+    display: flex
+    justify-content: space-between
+    font-size: 1.4rem
+    padding: 1.5rem 0
+    align-items: center
+    position: relative
+    line-height: 1.6rem
+    height: auto
+    .logo
+      //width: calc(90vw - 75%)
+      //padding-right: 1.5rem
+      position: absolute
+      width: 260px
+      left: -130px
+      margin-left: 50%
+      top: 50%
+      margin-top: -30.5px
+      h1
+        opacity: 0
+        height: 0
+    .communication,
+    .working-hours,
+    .phones
+      display: flex
+      flex-flow: column
+      position: relative
+    .social-icons
+      display: flex
+      li
+        a
+          width: 3rem
+          height: 3rem
+          color: #25222A
+          background: #fff
+          border-radius: 50%
+          line-height: 3rem
+          text-align: center
+          display: block
+          box-shadow: 1px 3px 5px RGBA(0, 0, 0, 0.16), inset 0px 0px 1px #ffffff
+          webkit-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          -moz-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          -o-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          &:hover
+            background: #F6F6F6
+            box-shadow: 1px 3px 5px RGBA(0, 0, 0, 0.16), inset 0px 0px 1px #f5f5f5
+    .communication:before,
+    .working-hours-phones:before,
+    .working-hours-phones p:before,
+    .working-hours:before,
+    .phones:before
+      content: ''
+      display: block
+      width: 1.6rem
+      height: 1.6rem
+      line-height: 1.6rem
+      position: absolute
+      color: #25222A
+      font-family: $font-awesome
+      font-size: 1.6rem
+    .communication:before
+      content: '\f0e0'
+      left: -15px
+    .working-hours:before
+      content: '\f0e0'
+    .phones:before
+      content: '\f0e0'
+    .working-hours-phones:before
+      content: '\f095'
+      left: 0px
+    .communication
+      .email
+        margin-bottom: 1rem
+        text-align: right
+    .social-icons
+      li
+        margin-right: .7rem
+        display: block
+        &:last-child
+          margin-right: 0
+    .working-hours-phones
+      margin-left: 3rem
+      p
+        margin-top: 1rem
+        &:before
+          content: '\f017'
+          left: 0px
+
+  #menu-fixed.active
+    &:before
+      display: block
+      content: ''
+      width: 100%
+      height: 100%
+      background: rgba(0,0,0,.9)
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 6
+      //z-index: -1
+  #menu-fixed
+    display: flex
+    flex-flow: column
+    z-index: 1
+    .case-upper-block
+      background: #fff
+    .upper-block
+      background: #25222A
+      color: #fff
+      height: 53px
+      display: flex
+      align-items: center
+      position: relative
+      z-index: 777
+      .base-nav
+        background: #37A247
+        width: calc(90vw - 75%)
+        //width: calc(1170px - 80%)
+        //height: 53px
+        //padding: 13.5px 15px
+        display: block
+        height: 53px
+        line-height: 53px
+        //padding-left: 1.8rem
+        position: relative
+        .menu-catalog-close
+          display: none
+          .mega-menu
+            display: none
+        .menu-catalog-active
+          //display: block
+          display: flex
+          flex-flow: column nowrap
+          justify-content: space-between
+          position: absolute
+          background: #fff
+          border-left: 2px solid #FF8E45
+          border-bottom: 2px solid #FF8E45
+          z-index: 999
+          left: 0
+          font-size: 1.5rem
+          line-height: 2.2rem
+          width: calc(100% - 2px)
+          //padding: 1.2rem 1.8rem
+          //padding: 1.4rem 1.8rem 1.6rem
+          height: 456px
+          //height: calc(100vh - 192px)
+          &:before
+            display: block
+            content: ''
+            width: calc(90vw - 100% - 2px)
+            height: calc(100% + 2px)
+            background: #fff
+            border-right: 2px solid #FF8E45
+            border-bottom: 2px solid #FF8E45
+            margin-left: 100%
+            position: absolute
+            top: 0
+            left: 0
+            padding: 1.1rem 1.6rem
+          .category-li:hover
+            .mega-menu
+              display: block
+              width: calc(90vw - 100% - 2px)
+              height: auto
+              background: #fff
+              border-right: 2px solid #FF8E45
+              border-bottom: 2px solid #FF8E45
+              margin-left: 100%
+              position: absolute
+              top: 0
+              left: 0
+              padding: 1.1rem 1.6rem 1.5rem
+              //padding: 2.5rem 2rem
+              ul
+                display: flex
+                flex-flow: column wrap
+                justify-content: flex-start
+                align-items: flex-start
+                -ms-flex-line-pack: start
+                align-content: flex-start
+                //align-content: space-between
+                height: calc(100% - 56px)
+                //padding-bottom: 1.5rem
+                //margin-bottom: -1rem
+                li
+                  //margin-bottom: 1.156rem
+                  width: calc((100% - 30px) / 3)
+                  margin-right: 1.5rem
+                  a
+                    padding: 1.1rem 0 0 0
+                    display: block
+                    &:hover
+                      color: #000
+                      text-decoration: underline
+          .category-li
+            width: 100%
+            padding: 0 1.5rem 0 0
+            .mega-menu
+              padding: 1.1rem 1.6rem 1.5rem
+              a
+                padding: 1.1rem 0 0 0
+                color: #000
+            a
+              color: #191921
+              padding: 1rem 0 0 1.5rem
+              display: block
+              &:hover
+                text-underline: none
+                text-decoration: none
+                color: #FF812F
+                > i
+                  color: #FF812F
+              i
+                color: #B8B8B8
+                font-size: 2rem
+                position: absolute
+                right: 10px
+                line-height: 2.1rem
+            &:last-child
+              padding: 0 1.5rem 1.5rem 0
+            &:first-child
+              .mega-menu
+                display: block
+                width: calc(90vw - 100% - 2px)
+                height: auto
+                background: #fff
+                border-right: 2px solid #FF8E45
+                border-bottom: 2px solid #FF8E45
+                margin-left: 100%
+                position: absolute
+                top: 0
+                left: 0
+                padding: 1.1rem 1.6rem
+                //padding: 2.5rem 2rem
+                ul
+                  display: flex
+                  flex-flow: column wrap
+                  justify-content: flex-start
+                  align-items: flex-start
+                  -ms-flex-line-pack: start
+                  align-content: flex-start
+                  //align-content: space-between
+                  height: calc(100% - 56px)
+                  //margin-bottom: -1rem
+                  li
+                    //padding-bottom: 1.156rem
+                    width: calc((100% - 30px) / 3)
+                    margin-right: 1.5rem
+                    //display: block
+                    a:hover
+                      padding: 1rem 0 0 0
+                      color: #000
+                      text-decoration: underline
+          .mega-menu
+            display: none
+            ul
+              display: none
+            p
+              font-size: 1.6rem
+              color: #FF812F
+              font-family: $default-font
+              border-bottom: 1px solid #95989A
+              padding: 1rem 0 2rem
+              margin-bottom: 0.6rem
+        .humb-catalog
+          display: flex
+          align-items: center
+          background: $btn-catalog-color
+          box-shadow: none
+          border: none
+          border-radius: 0
+          padding-left: 5rem
+          font-weight: 600
+          cursor: pointer
+          webkit-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          -moz-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          -o-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          &:before
+            display: block
+            color: #fff
+            position: absolute
+            font-family: $font-awesome
+            content: '\f0c9'
+            font-size: 2rem
+            left: 1.8rem
+          &:hover,
+          &:active
+            background: #ED4242
+            box-shadow: none
+          i
+            padding-right: 2rem
+            font-size: 2.5rem
+        #humb-catalog.active
+          background: #ED4242
+          box-shadow: none
+      .navbar-center
+        padding: 0 15px 0 0
+        position: relative
+        line-height: 53px
+        width: 59%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        //label
+        //  color: #EAE9E9
+        .radio-state
+          display: flex
+          input
+            cursor: pointer
+          p
+            margin-left: 1.5rem
+            &:first-child
+              margin-left: 0
+        //input[type="radio"]
+        //  width: 1.8rem
+        //  height: 1.8rem
+        //  border: 1px solid #95989A
+        //  border-radius: 2px
+
+        a
+          position: relative
+          color: #fff
+          display: block
+          width: 53px
+          height: 53px
+          line-height: 53px
+          text-align: center
+          box-shadow: none
+          border-left: 1px solid #25222A
+          border-right: 1px solid #25222A
+          border-radius: 0
+          background: #25222A
+          webkit-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          -moz-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          -o-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          &:hover,
+          &:active
+            //background: #FF812F
+            border-left: 1px solid #fff
+            border-right: 1px solid #fff
+        .alphabet
+          position: relative
+          &:before
+            display: block
+            position: absolute
+            content: ''
+            background: url(../img/text-correction-verification.svg) no-repeat center/cover
+            width: 28px
+            height: 28px
+            line-height: 53px
+            top: 14px
+        //.alphabet.active
+        //  border-left: 1px solid #fff
+        //  border-right: 1px solid #fff
+        .search-form
+          line-height: 53px
+          height: 53px
+          display: flex
+          width: calc(100% - 68px)
+          align-items: center
+          //position: absolute
+          //top: -2px
+          //right: 0
+          //padding-left: 15px
+          .search-clear
+            position: absolute
+            top: 0px
+            right: 82px
+            color: #25222A
+            cursor: pointer
+          .search-input
+            background: rgba(255,255,255,0.16)
+            border-radius: 2px
+            width: calc(100% - 53px)
+            transition: background 100ms ease-in,width 100ms ease-out
+            //border-bottom: 1px solid #fff
+            color: #fff
+            line-height: 3.6rem
+            border: none
+            box-shadow: none
+            padding: 0 37px 0 15px
+          .search-input.active
+            border: 1px solid rgba(0,0,0,0.12)
+            background: rgba(255,255,255,1)
+            box-shadow: 0px 1px 1px rgba(0,0,0,0.24)
+            color: #25222A
+          //  width: 94.2%
+            //right: 15px
+          .search-btn
+            background: #25222A
+            border: none
+            font-size: 2rem
+            width: 53px
+            cursor: pointer
+      //.search-form
+      //  line-height: 53px
+      //  height: 53px
+      //  position: absolute
+      //  top: -2px
+      //  right: -118px
+      //  .search-btn
+      //    background: none
+      //    border: none
+      //    font-size: 2rem
+      //    height: 0
+      //    width: 0
+      //    overflow: hidden
+      //    cursor: pointer
+      //  .search-input
+      //    width: 0px
+      //    border: none
+      //    padding: 0px
+      //    margin-right: .5rem
+      //    background: #25222A
+      //  .search-input.active
+      //    width: 160px
+      //    border-bottom: 1px solid #fff
+      //    color: #fff
+      //    width: 91%
+
+      .navbar-right
+        display: flex
+        color: #fff
+        position: absolute
+        right: 0
+        top: 0
+        align-items: center
+        .office-head-btn::before,
+        .shopping-basket-btn::before,
+        .heart-btn::before,
+        .exchange-btn::before
+          display: block
+          font-family: $font-awesome
+          font-size: 2rem
+        .office-head-btn
+          &:before
+            content: '\f007'
+        .shopping-basket-btn
+          &:before
+            content: '\f291'
+        .heart-btn
+          &:before
+            content: '\f004'
+        .exchange-btn
+          &:before
+            content: '\f0ec'
+        .private-office-head
+          position: absolute
+          width: 250px
+          height: auto
+          background: #fff
+          top: 53px
+          right: -9999px
+          border-left: 2px solid #FF8E45
+          border-right: 2px solid #FF8E45
+          border-bottom: 2px solid #FF8E45
+          z-index: 9
+        .private-office-head.active
+          right: 53px
+          li
+            border-bottom: 1px solid #D4D4D4
+            &:last-child
+              border-bottom: none
+            &:hover
+              cursor: pointer
+              a
+                text-decoration: none
+                color: #FF8E45
+            a
+              color: #191921
+              padding: 1rem 1.5rem
+              font-size: 1.5rem
+              display: block
+            .active
+              font-weight: 600
+        .btn-menu
+          position: relative
+          color: #fff
+          display: block
+          width: 53px
+          height: 53px
+          line-height: 53px
+          text-align: center
+          box-shadow: none
+          border: none
+          border-radius: 0
+          background: #25222A
+          webkit-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          -moz-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          -o-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          transition: .5s background cubic-bezier(0.42,0,0.58,1)
+          &:hover,
+          &:active
+            background: #FF812F
+          &:hover
+            span
+              background: #25222A
+          span
+            width: 2rem
+            height: 2rem
+            background: #FF812F
+            border-radius: 50%
+            position: absolute
+            top: 3px
+            right: 4px
+            font-size: 1.4rem
+            font-family: $default-font
+            font-weight: 600
+            text-align: center
+            line-height: 1.9rem
+        .btn-menu.active
+          background: #FF812F
+          span
+            background: #25222A
+        i
+          font-size: 2rem
+        .basket-icon
+          .count-basket
+            display: block
+            box-shadow: none
+            border: none
+            border-radius: 0
+            background: #FF812F
+            span
+              width: 2rem
+              height: 2rem
+              background: #25222A
+              border-radius: 50%
+              position: absolute
+              top: 3px
+              right: 4px
+              font-size: 1.4rem
+              font-family: $default-font
+              font-weight: 600
+              text-align: center
+              line-height: 1.9rem
+          .count-basket:hover,
+          .count-basket:active
+            background: #ED4242
+            box-shadow: none
+            transition: .5s background ease
+          //.count-basket:hover span
+          //  background: #FF812F
+      //a
+      //  color: #fff
+      //  text-decoration: underline
+  /* АЛФАВИТНЫЙ УКАЗАТЕЛЬ */
+  #menu-fixed
+    //.case-lower-block
+    //  background: #F5F5F5
+    .lower-block
+      display: none
+    .lower-block.active
+      background: #F5F5F5
+      display: flex
+      align-items: center
+      position: relative
+      //min-width: 1300px
+      //display: inline-block
+      //padding: 2px 20%
+      & > li
+        float: left
+        &:first-child
+          border-left: 1px solid #fff
+        a
+          text-decoration: none
+          color: #191921
+          font-size: 1.6rem
+          font-family: $default-font
+          padding: 4px 10px
+          border-right: 1px solid #fff
+          &:focus,
+          &:active,
+          &:hover
+            color: #FF812F
+        .alphabet-close
+          display: none
+      &:before,
+      &:after
+        content: ''
+        display: block
+        height: 2px
+        width: 100%
+        background: #F5F5F5
+        position: absolute
+        left: 0
+      &:before
+        top: 0
+      &:after
+        bottom: -2px
+
+  #menu-fixed
+    z-index: 777
+    .lower-block
+      //padding-left: calc(1170px - 80%)
+      padding-left: calc(90vw - 75%)
+      height: 31px
+      align-items: center
+      //li:hover .alphabet-close
+      li:hover .alphabet-close
+        visibility: visible
+        background: #fff
+        border-left: 2px solid #FF8E45
+        border-right: 2px solid #FF8E45
+        border-bottom: 2px solid #FF8E45
+        border-top: 3px solid #F5F5F5
+        margin-left: 25%
+        width: 75%
+        position: absolute
+        left: 0
+        top: 30px
+        display: flex
+        height: 200px
+        flex-flow: column wrap
+        justify-content: flex-start
+        align-items: flex-start
+        align-content: flex-start
+        min-height: 5.35rem
+        padding: 1.2rem 3.3rem .4rem
+        z-index: 999
+        //height: вычисляется через javascript (исходя из количества товаров в букве)
+        li
+          margin: 0 1.5rem .9rem 0
+          width: 32%
+          &:first-child
+            margin: 0 0 .9rem
+          a
+            font-size: 1.6rem
+            line-height: 1.6rem
+            display: block
+
+
+  .main
+    .action-new.tabs
+      >label
+        width: calc(18% - 2px)
+      //>label:before
+      //  //font-size: 22px
+      //  //line-height: 1.3rem
+      //>label:last-of-type
+      //  //padding: 19px
+      >label:first-of-type
+        margin-left: calc((46% - 6px)/2)
+    .breadcrumbs-views
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 1.2rem 0
+    .breadcrumbs
+      margin-bottom: 0
+    .views
+      display: flex
+      align-items: center
+      height: auto
+      width: auto
+      span
+        color: #2B2B2B
+        margin-right: 1.5rem
+        font-size: 1.5rem
+        //font-size: 1.4rem
+        &:last-child
+          margin-right: 0
+      &:hover
+        cursor: pointer
+        color: #FF812F
+    //.title
+    //  color: #ABABAB
+      //&:hover
+      //  cursor: auto
+      //  color: #ABABAB
+    .sub-categories
+      margin-bottom: 1.5rem
+      display: block
+      a
+        color: #2B2B2B
+        font-size: 1.4rem
+      #sub-categories-items
+        height: 80px
+        overflow: hidden
+        margin-bottom: 0.5rem
+        display: flex
+        flex-flow: column wrap
+        align-content: flex-start
+        li
+          //width: calc((100% - 45px) / 4)
+          width: calc((100% - 60px) / 5)
+          margin-right: 15px
+          a
+            &:hover
+              color: #000
+            span
+              color: #95989A
+      #sub-categories-items.active
+        height: 180px
+        overflow: hidden
+      #show-all
+        position: relative
+        font-size: 1.4rem
+        line-height: 2rem
+        font-family: $default-font
+        width: 100%
+        display: inline-block
+        &:hover
+          cursor: pointer
+        &:before,
+        &:after
+          content: ''
+          display: block
+        &:before
+          position: absolute
+          content: '\f107'
+          color: #ABABAB
+          font-family: $font-awesome
+          font-size: 2rem
+          left: 10rem
+          top: 0
+        &:after
+          position: absolute
+          top: 1rem
+          height: 1px
+          border-bottom: 1px solid #EDEDED
+          width: calc(100% - 120px)
+          right: 0
+      #show-all.hide
+        height: 0
+        overflow: hidden
+
+  .main
+    .catalog-block
+      //.filters-block
+      #products-catalog
+        width: 80%
+
+
+    #tile.active,
+    #list.active
+      color: #2DC8B8
+      //font-weight: 600
+
+    #products-catalog
+      display: flex
+      flex-flow: wrap
+      //width: calc(100% - 215px)
+      .item
+        padding: 15px
+      .item-img
+        width: 206px
+        height: 206px
+        //border: 1px solid #ccc
+
+    #products-catalog.tile
+      margin-right: -30px
+      .pagination
+        margin: 5rem auto 2rem
+      .item
+        width: calc((100% - 120px) / 4) //30px между блоками
+        //width: calc((100% - 90px) / 4) //20px между блоками
+        //min-height: 468px
+        //width: calc((100% - 120px) / 4)
+        margin-right: 30px
+        //padding: 15px
+        padding: 0
+        margin-bottom: 30px
+        justify-content: space-between
+        display: flex
+        flex-flow: column
+        &:hover
+          .add-btn
+            display: flex
+            height: auto
+            z-index: 3
+            background: #fff
+            position: absolute
+            width: calc(100% + 20px)
+            left: -10px
+            padding: 10px 10px 20px
+            box-shadow: 0px 2px 2px rgb(204, 204, 204)
+            //border-bottom: 2px solid #E5E5E5
+          .info-block
+            border-bottom: 1px solid #FF812F
+            //padding: 0 0 15px
+            //border-bottom: 2px solid #FF812F
+        //&:hover:before
+        //  width: calc(100% + 20px)
+        //  height: 13%
+        //  bottom: -53px
+        //  left: -10px
+        //  z-index: 1
+        //  content: ''
+        //  display: block
+        //  position: absolute
+        //  background: white
+        //&:hover:after
+          //box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)
+          //transition: all 280ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1)
+          //z-index: 2
+          //width: calc(100% + 20px)
+          //height: calc(100% + 20px + 40px + 3px)
+          //top: -10px
+          //left: -10px
+          //content: ''
+          //display: block
+          //position: absolute
+          //border: 1px solid #EEEEEE
+          //border: 1px solid #FF812F
+          //border: 1px solid #EEEEEE
+        .products-catalog-body
+          margin-bottom: 0
+        .add-btn
+          display: none
+
+          //position: relative'
+          //height: auto
+          //width: calc(100% + 18px)'
+          //width: 100%
+          //z-index: 3
+          //background: #fff
+          //border-bottom: 2px solid #E5E5E5
+          //padding: 0 0 15px
+          //background: #25222A'
+          //left: -9px'
+          //padding: 10px'
+        //&:hover
+          //border: 1px solid #fff
+          //.add-btn
+          //  height: auto
+          //  width: calc(100% + 18px)
+          //  z-index: 3
+          //  //background: #fff
+          //  background: #25222A
+          //  left: -9px
+          //  padding: 10px
+          //bottom: 0
+        h3
+          //height: 80px
+          height: 60px
+          overflow: hidden
+        .img-table
+          display: none
+        .img-table-block
+          display: none
+        .item-body
+          .table-code
+            display: none
+        .etc-table,
+        .btns-table
+          display: none
+    #products-catalog.list
+      margin-right: -30px
+      .item
+        //width: calc((100% - 30px) / 2)
+        width: 100%
+        margin-right: 15px
+        display: flex
+        flex-flow: column
+        padding: 0
+        .products-catalog-body
+          display: flex
+          margin: 0
+        .item-logo
+          width: 100px
+          height: 100px
+          position: absolute
+          top: 0
+          right: 0
+          z-index: 1
+          border: 5px solid #fff
+        .item-body
+          width: calc(100% - 360px)
+          display: flex
+          flex-flow: column nowrap
+          justify-content: space-between
+          .table-code
+            display: none
+          .img-table
+            display: none
+          .img-table-block
+            display: none
+          .info-block
+            display: flex
+            .trademark
+              height: auto
+              opacity: 1
+              margin-right: 2rem
+            .available
+              position: relative
+              color: #37A247
+              width: auto
+              height: auto
+              font-size: 1.3rem
+              line-height: 1.5rem
+              &:before
+                right: -22px
+            .product-code
+              margin-bottom: 0
+              margin-right: 25px
+          h3
+            text-align: left
+            //width: 79%
+            width: 100%
+            //height: 40px /*50px*/
+            //margin-top: 1rem
+            //height: 50px
+            line-height: 2.5rem
+          .introtext
+            font-size: 1.3rem
+            margin-bottom: 1rem
+            opacity: 1
+            height: auto
+          .main-info
+            display: flex
+            flex-flow: row nowrap
+            width: 80%
+            //margin-bottom: 1rem
+          .buy-block
+            display: flex
+            flex-flow: column nowrap
+            //width: 55%
+            width: 100%
+            //margin-right: 1.5rem
+            .buy-block-list
+              display: flex
+              flex-flow: row nowrap
+            .price-block
+              flex-flow: column-reverse
+              margin-bottom: 0
+              //margin-right: 1rem
+          .quantity
+            margin-bottom: 0
+            //margin-right: 1rem
+            input
+              width: 80px
+          .count-block
+            width: 45%
+            .minimum
+              display: none
+        .add-btn
+          position: absolute
+          right: 0
+          //bottom: 0
+          bottom: 5px
+        .item-img
+          width: 206px
+          height: 206px
+          margin-bottom: 0
+          margin-right: 3rem
+        .etc-table,
+        .btns-table
+          display: none
+    #products-catalog.table
+      .item
+        width: 100%
+        display: flex
+        justify-content: space-between
+        margin-bottom: 0
+        border-top: 1px solid #EEEEEE
+        border-right: 1px solid #EEEEEE
+        border-left: 1px solid #EEEEEE
+        border-bottom: none
+        &:last-child
+          border-bottom: 1px solid #EEEEEE
+        .status,
+        .item-img
+          display: none
+        .item-body
+          display: flex
+          flex-flow: row nowrap
+          justify-content: space-between
+          width: 100%
+          margin-right: 1.5rem
+          .table-code
+            width: 5%
+            font-size: 1.5rem
+            line-height: 3rem
+            display: block
+          h3
+            width: 45%
+            margin-bottom: 0
+            text-align: left
+          .img-table-block
+            display: none
+          .img-table
+            line-height: 3.6rem
+            display: block
+            &:hover
+              cursor: pointer
+              .img-table-block
+                width: 140px
+                height: 140px
+                background: #fff
+                border: 2px solid #FF812F
+                position: absolute
+                display: block
+                z-index: 100
+                top: -20px
+                left: 56%
+          .info-block
+            display: none
+          .count-block
+            display: none
+          .buy-block
+            display: flex
+            flex-flow: row nowrap
+            justify-content: space-between
+            width: 40%
+            .price-block
+              flex-flow: column nowrap
+              margin-bottom: 0
+              width: 27%
+            .quantity
+              input
+                width: 85px
+            .total
+              font-size: 1.6rem
+              width: 27%
+            .add-btn
+              display: none
+        .etc-table
+          width: 40px
+          height: 40px
+          line-height: 3.6rem
+          text-align: center
+          border-radius: 2px
+          cursor: pointer
+          color: #000000
+          background: #fff
+          border: 1px solid #E5E5E5
+          display: block
+        .btns-table
+          display: none
+        .btns-table.active
+          display: block
+          position: absolute
+          right: -31px
+          background: #FF812F
+          color: #fff
+          width: 40px
+          height: 40px
+          line-height: 3.6rem
+          text-align: center
+          border-radius: 2px
+          cursor: pointer
+          &:before,
+          &:after
+            content: '\F004'
+            display: block
+            width: 40px
+            height: 40px
+            color: #000000
+            background: #fff
+            line-height: 3.6rem
+            text-align: center
+            border-radius: 2px
+            cursor: pointer
+            position: absolute
+            border: 1px solid #E5E5E5
+            font-family: $font-awesome
+            font-size: 1.6rem
+          &:before
+            top: -46px
+          &:after
+            content: '\F0EC'
+            bottom: -46px
+          &:before:hover,
+          &:after:hover
+            color: #FF812F
+
+
+    .page-product
+      margin-bottom: 3rem
+      .left-block,
+      .right-block
+        width: calc((100% - 30px) / 2)
+      //.left-block
+        //img
+        //  border: 1px solid #ccc
+      .right-block
+        h2
+          font-size: 2.2rem
+        .available-info
+          display: flex
+          justify-content: space-between
+          position: relative
+          margin-bottom: 10px
+          span
+            font-size: 1.4rem
+            color: #787878
+            font-family: "opensans-example", sans-serif
+          .status
+            right: 0
+            span
+              font-size: 1.4rem
+              color: #fff
+          .available
+            font-size: 1.4rem
+            color: #37A247
+            font-family: "opensans-example", sans-serif
+            position: relative
+            margin-left: 35px
+            &:before
+              content: ''
+              display: block
+              width: 14px
+              height: 14px
+              background: #37A247
+              border-radius: 50%
+              position: absolute
+              top: 3px
+              left: -22px
+        .other-info
+          display: flex
+          padding-bottom: 15px
+          border-bottom: 1px solid #EDEDED
+          margin-bottom: 15px
+          .product-code
+            margin-right: 4rem
+          p
+            font-size: 1.4rem
+            color: #787878
+            span
+              color: #575757
+              margin-left: 15px
+        table
+          margin-bottom: 10px
+          tr
+            border-bottom: 10px solid #fff
+          .tr-quantity
+            border-bottom: 15px solid #fff
+          .first-col
+            width: 5rem
+            font-size: 1.4rem
+            color: #787878
+            padding-right: 4rem
+            //padding-bottom: 1rem
+            vertical-align: middle
+          .price-old
+            color: #9D9D9D
+            font-size: 1.6rem
+          .price-new
+            color: #ED4242
+            font-size: 2rem
+          .total
+            font-weight: 600
+            font-size: 2.2rem
+            color: #2A2A2A
+        .buy
+          font-size: 1.8rem
+          height: 44px
+          line-height: 44px
+          padding: 0px 75px
+          display: inline-block
+          width: auto
+          margin-bottom: 15px
+          i
+            margin-right: 8px
+        .quantity
+          .less,
+          .more,
+          input
+            height: 44px
+            line-height: 44px
+          .less,
+          .more
+            width: 44px
+        .add-btn
+          margin-bottom: 15px
+          padding-bottom: 15px
+          //border-bottom: 1px solid #EDEDED
+          .compare
+            margin-right: 2rem
+          span
+            i
+              margin-right: 6px
+            &:hover
+              color: #FF812F
+              cursor: pointer
+              i
+                color: #FF812F
+    .product-info
+      margin-bottom: 6rem
+      .right-block
+        //margin-top: 55.75px
+        margin-top: 0
+      .tabs>label
+        font-size: 1.5rem
+        width: calc(25% - 3.15px)
+      .tabs>label:before
+        display: none
+
+  .related-products
+    //width: calc(100% - 66px)
+    //margin: 0 auto
+    .title
+      color: rgb(75, 75, 75)
+    .slick-slide
+      padding: 0
+      //border: 1px solid #EEEEEE
+      margin: 0 15px
+      //border-radius: 2px
+    .slick-list
+      margin: 0 auto
+      width: 94%
+    .slick-slider
+      .item
+        .item-body
+          h3
+            height: 60px
+            overflow: hidden
+
+  .main
+    .product-info
+      .properties
+        table
+          .first-col
+            width: 25%
+            text-align: left
+
+  .slick-carousel
+    //width: calc(100% - 66px)
+    //width: 100%
+    margin: 0 auto
+    .slick-slide
+      .item
+        .item-body
+          height: 150px
+          h3
+            height: 80px
+            overflow: hidden
+
+  .main-slider
+    .slick-slide
+      img
+        margin: 0 auto
+    .slick-prev,
+    .slick-next
+      z-index: -3
+      font-size: 0
+      line-height: 0
+      position: absolute
+      //top: 50%
+      display: block
+      //width: 38px
+      height: 32px
+      //width: auto
+      padding: 0
+      -webkit-transform: translate(0, -50%)
+      -ms-transform: translate(0, -50%)
+      transform: translate(0, -50%)
+      cursor: pointer
+      color: transparent
+      border: none
+      outline: none
+      width: 32px
+      background: #869791
+      opacity: .5
+      border-radius: 50%
+      &:before
+        opacity: .5
+        color: #d5d5d5
+        font-size: 1.5rem
+        line-height: 2.2
+        transition: all .6s ease-in-out
+    //&:hover
+    //  opacity: 1
+    //  &:before
+    //    opacity: 1
+    //    color: #fbfbfb
+    .slick-prev
+      left: 15px
+    [dir='rtl'] .slick-prev
+      right: 15px
+      left: auto
+    .slick-next
+      right: 15px
+    [dir='rtl'] .slick-next
+      right: auto
+      left: 15px
+
+  .main-slider:hover
+    .slick-prev,
+    .slick-next
+      font-size: 0
+      line-height: 0
+      position: absolute
+      //top: 50%
+      display: block
+      //width: 38px
+      height: 32px
+      //width: auto
+      padding: 0
+      -webkit-transform: translate(0, -50%)
+      -ms-transform: translate(0, -50%)
+      transform: translate(0, -50%)
+      cursor: pointer
+      color: transparent
+      border: none
+      outline: none
+      z-index: 3
+      width: 32px
+      background: #869791
+      opacity: .5
+      border-radius: 50%
+      &:before
+        opacity: .5
+        color: #d5d5d5
+        font-size: 1.5rem
+        line-height: 2.2
+        transition: all .6s ease-in-out
+      &:hover
+        opacity: 1
+        &:before
+          opacity: 1
+          color: #fbfbfb
+    .slick-dots
+      li
+        button
+          &:before
+            opacity: .5
+            border: 1px solid #a5a5a5
+            background: #cfcfcf
+          &:hover:before
+            border: 4px solid #cfcfcf
+            background: #fff
+      li.slick-active
+        button
+          &:before
+            border: 4px solid #cfcfcf
+            background: #fff
+
+  .advertise-area
+    a
+      position: relative
+      &:hover
+        cursor: pointer
+        &:before
+          content: ""
+          display: block
+          opacity: 1
+          transform: scale(1)
+        &:after
+          content: ""
+          display: block
+          opacity: 1
+          transform: scale(1)
+      &:before,
+      &:after
+        content: ""
+        display: block
+        opacity: 0
+        position: absolute
+        transform: scale(0, 1)
+        transition: opacity 0.35s ease 0s, transform 0.35s ease 0s
+        z-index: 1
+        bottom: 15px
+        left: 15px
+        right: 15px
+        top: 15px
+        width: calc(100% - 30px)
+        height: calc(100% - 45px)
+      &:before
+        border-bottom: 1px solid #fff
+        border-top: 1px solid #fff
+        transform-origin: 0 0 0
+      &:after
+        border-left: 1px solid #fff
+        border-right: 1px solid #fff
+        transform-origin: 100% 0 0
+
+  .progress-steps h2,
+  .news-block h2,
+  .trademarks-slider h2
+    font-size: 2rem
+    margin: 0 25% 4rem
+
+  .trademarks-slider
+    margin-bottom: 5rem
+    h2
+      width: 100%
+      margin: 0 0 4rem
+    .slick-slide
+      a
+        display: block
+        width: 86px
+        height: 86px
+        margin: 0 auto
+    .slick-list
+      width: 86vw
+    .slick-prev
+      left: 4.3vw
+    [dir='rtl'] .slick-prev
+      right: 4.3vw
+      left: auto
+    .slick-next
+      right: 4.3vw
+    [dir='rtl'] .slick-next
+      right: auto
+      left: 4.3vw
+
+  .news-block
+    .items
+      flex-flow: row nowrap
+      .item
+        width: calc((100% - 90px) / 4)
+        &:hover
+          border-bottom: 2px solid #FF812F
+          .image
+            img
+              -webkit-transform: scale(1.1)
+              -moz-transform: scale(1.1)
+              -o-transform: scale(1.1)
+          a
+            color: #000
+
+  .main
+    .panel-heading
+      margin: 3rem 0 3rem
+
+  .main
+    .delivery-tabs,
+    .payment-tabs
+      min-height: 340px
+      > label
+        width: 20%
+      section
+        left: calc(20% + 30px)
+        width: calc(80% - 30px)
+        .title
+          margin: 1rem 0 1.5rem
+          color: #000
+        .content
+          display: flex
+          justify-content: space-between
+          .text
+            width: calc(70% - 25px)
+            span
+              font-weight: 600
+            a
+              text-decoration: underline
+              color: #000
+            a:visited
+              color: rgba(0,0,0,0.5)
+          .image
+            width: calc(30% - 15px)
+            min-height: 340px
+          .del-kharkov
+            background: url("../img/del-kharkov.svg") no-repeat center / contain
+          .del-pickup
+            background: url("../img/del-pickup_.svg") no-repeat center / contain
+          .del-Ukraine
+            background: url("../img/del-Ukraine.svg") no-repeat center / contain
+          .del-nova-poshta
+            background: url("../img/del-nova-poshta.svg") no-repeat center / contain
+          .del-in-time
+            background: url("../img/del-in-time.svg") no-repeat center / contain
+          .del-ukrposhta
+            background: url("../img/del-ukrposhta.svg") no-repeat center / contain
+          .payment-cart
+            background: url("../img/payment-cart.png") no-repeat center / contain
+          .payment-in-cash
+            background: url("../img/payment-in-cash_2.png") no-repeat center / contain
+          .payment-others
+            background: url("../img/payment-others.png") no-repeat center / contain
+
+  .main
+    .panel-body
+      .form-horizontal
+        width: 30%
+
+  .basket-table
+    display: table
+    width: 100%
+    //border: 1px solid #EDEDED
+    border-top: 1px solid #EDEDED
+    border-left: 1px solid #EDEDED
+    border-right: 1px solid #EDEDED
+    border-collapse: collapse
+    margin-bottom: 1rem
+    background: #fff
+    th
+      font-size: 1.6rem
+      font-weight: 600
+      padding: 15px
+    tr
+      border-top: 1px solid #EDEDED
+      //border: 1px solid #EDEDED
+      &:hover
+        background: #f9f9f9
+      &:first-child,
+      &:last-child
+        &:hover
+          background: #fff
+    td
+      padding: 15px
+    //border: 1px solid #EDEDED /*потом убрать*/
+    th,
+    td
+      vertical-align: middle
+    tr
+      td
+        &:last-child
+          vertical-align: top
+    label
+      position: relative
+      &:hover
+        cursor: pointer
+    .basket-img
+      width: 100px
+      height: 100px
+    //border: 1px solid #EDEDED
+    .info-block
+      width: 45%
+      padding-left: 15px
+      a
+        font-size: 1.5rem
+        //font-size: 1.4rem
+        color: #2b2b2b
+        font-family: $default-font
+        cursor: pointer
+      span
+        font-size: 1.3rem
+        //font-size: 1.2rem
+        font-family: $default-font
+        padding-right: 15px
+    //.basket-info
+    .quantity
+      input
+        width: 70px
+        &:focus
+          border: 1px solid #ff812f
+    .basket-img-line
+      width: 130px
+    .basket-price-line
+      color: #ED4242
+      font-weight: 600
+      font-size: 1.6rem
+      padding: 0 0 0 15px
+      //font-size: 1.4rem
+      span
+        font-size: 1.4rem
+    //font-weight: normal
+    .basket-quantity-line
+      width: 160px
+    .basket-total-line
+      padding: 0 0 0 15px
+      .total
+        font-weight: 600
+        font-size: 1.8rem
+      //font-size: 1.4rem
+      span
+        font-size: 1.4rem
+    .icon-close
+      cursor: pointer
+      font-size: 2rem
+    .basket-total-result
+      .clear
+        font-size: 1.5rem
+        cursor: pointer
+      .basket-clear-line
+        border-left: 1px solid #fff
+      .basket-total-result-line
+        border-right: 1px solid #fff
+        padding: 15px 0
+        p
+          text-align: right
+          font-size: 1.6rem
+          .amount
+            font-size: 2rem
+            font-weight: 600
+            margin-left: 1rem
+          span
+            font-size: 1.5rem
+            margin-left: .6rem
+  .basket-checkout
+    text-align: right
+    margin-bottom: 5rem
+    .checkout
+      background: #FF8E44
+      padding: 1rem 2rem
+      text-align: center
+      border-radius: 2px
+      font-weight: 600
+      text-transform: uppercase
+      color: #fff
+
+  //.popup-basket
+    display: none
+  .popup-basket.active
+    top: 0px
+    right: 0px
+    left: auto
+    width: 500px
+    position: fixed
+    height: 100vh
+    .title
+      padding: 0 3rem
+      height: 54px
+      min-height: 54px
+      line-height: 54px
+      font-size: 1.6rem
+      .close
+        font-size: 1.5rem
+    .popup-basket-body
+      //overflow: auto
+      //overflow-y: scroll
+      overflow-y: auto
+      height: calc(100% - 169px)
+    .popup-basket-footer
+      position: absolute
+      bottom: 0
+      width: 100%
+
+  .basket-page
+    .item-title
+      .td1
+        width: 60%
+        text-align: center
+    .basket-item
+      .basket-title-desc
+        width: calc(60% - 15px)
+      .price-quantity-block
+        width: calc(40% - 15px)
+
+  .checkout
+    flex-flow: row nowrap
+    justify-content: space-between
+    .checkout-form-block
+      .content-tab
+        form
+          display: flex
+          flex-flow: row nowrap
+          justify-content: space-between
+          .personal-data,
+          .shipping-information
+            width: calc(50% - 15px)
+
+  .footer
+    .subscription-bg
+      height: 185px
+      .subscription
+        padding: 0
+      .title
+        margin-bottom: 3.5rem
+        line-height: 1.6rem
+      form
+        width: auto
+      input
+        width: 30rem
+        margin-right: 2.7rem
+        margin-bottom: 0
+      button
+        width: auto
+    .footer-bg
+      .copyright
+        padding: 1.5rem 0
+      .footer-main
+        flex-flow: row nowrap
+        justify-content: space-between
+        padding: 3.6rem 1.5rem
+        section
+          margin-bottom: 0
+        h2
+          margin-bottom: 3.7rem
+
+
+        //.contacts-info
+        //  .info
+        //    li
+        //      margin-bottom: 2rem
+        //      position: relative
+        //      padding-left: 4rem
+        //    .location:before,
+        //    .phone-numbers:before,
+        //    .working-hours:before,
+        //    .email:before
+        //      content: ''
+        //      display: block
+        //      font-family: $font-awesome
+        //      font-size: 2rem
+        //      float: left
+        //      position: absolute
+        //      left: 0
+        //    .location:before
+        //      content: '\f3c5'
+        //    .phone-numbers:before
+        //      content: '\F095'
+        //    .working-hours:before
+        //      content: '\F017'
+        //    .email:before
+        //      content: '\F0E0'
+        //  .social-icons
+        //    display: flex
+        //    justify-content: space-between
+        //    li
+        //      & > a
+        //        width: 3.7rem
+        //        height: 3.7rem
+        //        line-height: 3.7rem
+        //        display: block
+        //        background: #FF8E45
+        //        border-radius: 50%
+        //        text-align: center
+        //        float: left
+        //        cursor: pointer
+        //        webkit-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+        //        -moz-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+        //        -o-transition: .5s background cubic-bezier(0.42,0,0.58,1)
+        //        transition: .5s background cubic-bezier(0.42,0,0.58,1)
+        //      & > a:hover
+        //        background: #fff
+        //        color: #25222A
+
+
+
+//button
+//  background-color: dodgerblue
+//  color: white
+//  padding: 10px 20px
+//  border: 0
+//  font-size: 14px
+//  cursor: pointer
+
+.ripple-container
+  .ripple
+    background-color: rgba(255,255,255,0.4)
+    animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1)
+  @keyframes ripple
+    0%
+      transform: scale(0)
+      opacity: 1
+    80%
+      transform: scale(1)
+    100%
+      opacity: 0
+//.main-nav catalog
+/* АЛФАВИТНЫЙ УКАЗАТЕЛЬ END */
+	/**/
+
