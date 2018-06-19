@@ -162,12 +162,30 @@
             {{--Ваша корзина пуста--}}
         {{--</div>--}}
     </div>
+    <div id="overlay"></div><!-- Пoдлoжкa, oднa нa всю стрaницу -->
+
+    <div id="modal1" class="modal_div">
+        <span class="modal_close">X</span>
+        <form action="" method="post">
+            <h3>Простое модальное окно 1</h3>
+            <p>Тут может быть рандомная обычная форма например.</p>
+            <p>Ваше имя<br />
+                <input type="text" name="your-name" value="" size="40" />
+            </p>
+            <p>Ваш телефон<br />
+                <input type="text" name="your-name" value="" size="40" />
+            </p>
+            <p style="text-align: center; padding-bottom: 10px;">
+                <input type="submit" value="Отправить" />
+            </p>
+        </form>
+    </div>
 
     <div id="menu-fixed">
         <div class="case-upper-block">
         <div class="upper-block container">
             <nav class="base-nav catalog">
-                <span class="humb-catalog btn wave left" id="humb-catalog">
+                <span id="humb-catalog" class="humb-catalog btn wave left"> <!-- <span id="humb-catalog" -->
                     {{--<i class="fa fa-bars"></i>--}}
                     Каталог товаров</span>
                 <ul class="menu-catalog-close">
@@ -213,9 +231,12 @@
                 </span>
                 <div class="basket-icon">
                     <span class="count-basket btn wave left btn-menu shopping-basket-btn" id="basket">
-                        <span>2</span>
+                        <span id="js-count-basket">2</span>
                         {{--<i class="fa fa-shopping-basket top-nav-icon"></i>--}}
                     </span>
+                    <div id="modal_basket_message" class="modal-message">
+                        <p>Товар успешно добавлен в корзину</p>
+                    </div>
                 </div>
                 <ul class="private-office-head">
                     @if (Auth::guest())

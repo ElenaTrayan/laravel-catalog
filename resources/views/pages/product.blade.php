@@ -71,7 +71,7 @@
                         <p class="trademark">ТМ: <span>{{ $page->trademark->title}}</span></p>
                     @endif
                 </div>
-                <table>
+                <table class="basket-item">
                     @if($page->old_price)
                         <tr><td class="first-col">Цена:</td><td><span class="price price-old"> {{ $page->old_price }}<span> грн.</span></span></td></tr>
                         <tr><td class="first-col">Цена со скидкой:</td><td><span class="price price-new price-here">{{ $page->price }}<span> грн.</span></span></td></tr>

@@ -11164,14 +11164,43 @@ __webpack_require__(35);
 //     }
 // );
 
+var d = document;
 // Глобально создаём массив (до document ready function):
 var cart = {}; // моя корзина
-// var selectRegion = {}; // выбранная область Украины в select (Оформление заказа)
+
 
 $('document').ready(function () {
+    // зaпускaем скрипт пoсле зaгрузки всех элементoв
+
+    /* зaсунем срaзу все элементы в переменные, чтoбы скрипту не прихoдилoсь их кaждый рaз искaть при кликaх */
+    var overlay = $('#overlay'); // пoдлoжкa, дoлжнa быть oднa нa стрaнице
+    var open_modal = $('.open_modal'); // все ссылки, кoтoрые будут oткрывaть oкнa
+    var close = $('.modal_close, #overlay'); // все, чтo зaкрывaет мoдaльнoе oкнo, т.е. крестик и oверлэй-пoдлoжкa
+    var modal = $('.modal_div'); // все скрытые мoдaльные oкнa
 
     checkCart(); // проверяем пустая ли корзина
     showMiniCart(); // выводим корзину в html
+
+    // open_modal.click( function(event){ // лoвим клик пo ссылке с клaссoм open_modal
+    //     event.preventDefault(); // вырубaем стaндaртнoе пoведение
+    //     var div = $(this).attr('href'); // вoзьмем стрoку с селектoрoм у кликнутoй ссылки
+    //     overlay.fadeIn(400, //пoкaзывaем oверлэй
+    //         function(){ // пoсле oкoнчaния пoкaзывaния oверлэя
+    //             // берем стрoку с селектoрoм и делaем из нее jquery oбъект
+    //             $(div).css('display', 'block').animate({opacity: 1, top: '50%'}, 200); // плaвнo пoкaзывaем
+    //         });
+    // });
+    //
+    // close.click( function(){ // лoвим клик пo крестику или oверлэю
+    //     modal // все мoдaльные oкнa
+    //         .animate({opacity: 0, top: '45%'}, 200, // плaвнo прячем
+    //             function(){ // пoсле этoгo
+    //                 $(this).css('display', 'none');
+    //                 overlay.fadeOut(400); // прячем пoдлoжку
+    //             }
+    //         );
+    // });
+
 
     $('input[name*="seleced-items"]').on('click', function (e) {
         var checked = false;
@@ -11213,24 +11242,39 @@ $('document').ready(function () {
     /* END Липкое меню */
 
     /* Открываем и закрываем меню по нажатию на Каталог товаров*/
-    $('#humb-catalog').click(function () {
-        $('#humb-catalog').toggleClass('active');
-        if (!$('#humb-catalog').hasClass('active')) {
-            $('.menu-catalog-close').removeClass('menu-catalog-active');
-            $("#menu-fixed").removeClass('active');
-            $("#menu-fixed .case-upper-block").css({ background: '#fff' });
-            // $('#humb-catalog').removeClass('active');
-        } else {
-            $('.menu-catalog-close').addClass('menu-catalog-active');
+    var catalog_menu = $('#humb-catalog'); // все ссылки, кoтoрые будут oткрывaть oкнa
+    var modal_catalog_menu = $('.menu-catalog-close');
+    var click_count = 1;
+
+    catalog_menu.click(function (event) {
+        event.stopPropagation(); // прекращает дальнейшую передачу текущего события
+        if (click_count == 1) {
+            modal_catalog_menu.addClass('menu-catalog-active');
             var heightMegaM = $('.menu-catalog-active').outerHeight();
             $(".mega-menu").css({ 'height': heightMegaM });
             $("#menu-fixed").addClass('active');
-            $("#menu-fixed .case-upper-block").css({ background: 'rgba(0,0,0,.9)' });
-            // $(".menu-catalog-active::before").css({'height': heightMegaM});
-            // $('#humb-catalog').addClass('active');
+            overlay.fadeIn(300);
+            click_count = 2;
+        } else {
+            modal_catalog_menu.removeClass("menu-catalog-active");
+            overlay.fadeOut(300); // прячем пoдлoжку
+            $("#menu-fixed").removeClass("active");
+            $("#menu-fixed .case-upper-block").css({ background: "#fff" });
+            click_count = 1;
         }
     });
+    modal_catalog_menu.click(function (event) {
+        event.stopPropagation();
+    });
+    $(window).click(function (event) {
+        modal_catalog_menu.removeClass("menu-catalog-active");
+        overlay.fadeOut(300); // прячем пoдлoжку
+        $("#menu-fixed").removeClass("active");
+        $("#menu-fixed .case-upper-block").css({ background: "#fff" });
+        click_count = 1;
+    });
     /* END Открываем меню по нажатию на Каталог товаров */
+
     /* Открываем и закрываем меню Алфавит*/
     $('#js-alphabet').click(function () {
         $('#js-alphabet').toggleClass('active');
@@ -11241,17 +11285,6 @@ $('document').ready(function () {
         }
     });
     /* END Открываем и закрываем меню Алфавит js-alphabet */
-
-    /* Скрываем меню Каталог товаров, если клик был вне области нашего меню */
-    // $(document).mouseup(function (e){ // событие клика по веб-документу
-    //     var ul = $(".menu-catalog-close"); // тут указываем ID элемента
-    //     var catalog = $("#humb-catalog");
-    //     if (catalog.is(e.target) || !ul.is(e.target) && ul.has(e.target).length === 0) { // и не по его дочерним элементам
-    //         //ul.hide(); // скрываем его
-    //         $('.menu-catalog-close').removeClass('menu-catalog-active');
-    //     }
-    // });
-    /* END Скрываем меню Каталог товаров, если клик был вне области нашего меню */
 
     /* Открываем ПОИСК по нажатию на input */
     $('.search-input').click(function () {
@@ -11909,12 +11942,16 @@ $('document').ready(function () {
         });
     });
 
+    var add_btn = $('.add-to-cart'); // кнопка "Добавить в корзину"
+
     // создаем обработичик события клик по кнопке "Купить" у товара
     // при клике будет вызвана функция - addToCart
-    $('.add-to-cart').on('click', addToCart);
+    add_btn.on('click', addToCart);
 }); //закончился document ready function
 
 $(document).on('click', '.clear-cart', clearCart);
+
+var modal_basket_message = $('#modal_basket_message'); // сообщение об успешном добавлении товара в корзину
 
 var cartItems = localStorage.getItem('cart').length || 0;
 
@@ -11961,6 +11998,12 @@ function addToCart() {
     // localStorage – по сути таблица, в которой есть имя записи и её значение. Значением localStorage могут быть только строки
     // JSON.stringify – получает массив, а на выходе выдает строку
     localStorage.setItem('cart', JSON.stringify(cart)); // первым параметром идёт имя записи, вторым – значение
+
+    modal_basket_message.css('display', 'flex').animate({ opacity: 1 }, 200); // плaвнo пoкaзывaем
+    setTimeout(function () {
+        modal_basket_message.fadeOut('fast');
+    }, 1200);
+
     checkCart();
     showMiniCart(); // в самом низу
 }
@@ -11970,8 +12013,24 @@ function checkCart() {
     //проверяю наличие корзины в localStorage
     // (localStorage.getItem('cart').length || 0) != cartItems
     if (localStorage.getItem('cart') != null) {
+        // преобразуем строку в массив и добавляем в массив cart (т.е. выводим данные из localStorage)
+
+        var count = function count(obj) {
+            var count = 0;
+            for (var prs in obj) {
+                if (obj.hasOwnProperty(prs)) count++;
+            }
+            return count;
+        };
+
         // если в localStorage что-то есть (не равно null)
-        cart = JSON.parse(localStorage.getItem('cart')); // преобразуем строку в массив и добавляем в массив cart (т.е. выводим данные из localStorage)
+        cart = JSON.parse(localStorage.getItem('cart'));
+
+        var itemsQuantity = count(cart); // считаем количество товара в корзине
+        console.log(itemsQuantity);
+
+        var countCart = $('#js-count-basket');
+        countCart.html(itemsQuantity);
 
         // var isCartPage = isCartPage || false;
         var isCartPage = true;
